@@ -1,5 +1,3 @@
-On va faire ça propre, stratégique et rentable.
-Objectif : **un site vitrine moderne pour école primaire**, rapide à déployer et facile à dupliquer pour d’autres écoles 💰
 
 ---
 
