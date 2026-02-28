@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylisons le header */
+header {
+    background: #f4f4f4;
+    padding: 1.25rem;
+    box-shadow: 0 0 10px black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.active {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.9375rem;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* cacher le menu mobile sur les écrans d'ordi */
+#nav-toggle {
+    display: none;
+    background: black;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Media queries - pour les appareils mobiles */
+@media screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-transform: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #e5e5e5;
+        padding: 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background: black;
+        color: white;
+    }
+
+    /* rajout d'une classe afin d'afficher les liens via JS */
+    .nav-links.active {
+        display: flex;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+}
+
+
+
+
